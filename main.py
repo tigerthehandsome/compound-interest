@@ -27,4 +27,18 @@ y = int(data_dict['y'])
 # s = int(input("年利率"))
 # y = int(input("年份"))
 
-print(compound_interest(x,s,y))
+print(compound_interest(x,s,y))#算出結果
+#不但要計算出成果且要存智記事本
+#打開記事本檔案
+file = open ('result.txt','w',encoding = 'utf-8')
+#'result.txt' -> 檔案名稱
+#'w' -> write寫入
+#encoding -> 文字編碼 繁體用'utf-8' 簡體'big-5'
+file.write('本金'+str(x)+'\n')
+file.write('年利率'+str(s)+'\n')
+file.write('投資年分'+str(y)+'\n')
+file.write('以下是您可以得到的金額'+'\n')
+#file.write(str(int(compound_interest(x,s,y))))
+num = compound_interest(x,s,y)
+file.write(f'{num:.2f}元')#字串格式化
+file.close()
