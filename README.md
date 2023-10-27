@@ -1,2 +1,3 @@
 # compound-interest
-compound interest calculator
+**compound interest calculator**
+*
